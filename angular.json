@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "gamers-ui:build:production"
+              "buildTarget": "gamers-ui:build:production"
             },
             "development": {
-              "browserTarget": "gamers-ui:build:development"
+              "buildTarget": "gamers-ui:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "gamers-ui:build"
+            "buildTarget": "gamers-ui:build"
           }
         },
         "test": {
