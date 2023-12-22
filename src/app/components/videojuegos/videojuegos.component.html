@@ -1,1 +1,28 @@
-<p>videojuegos works!</p>
+<div class="container pt-5">
+    <h1 class="text-center mb-4">Lista de Videojuegos</h1>
+    <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th class="text-center" scope="col">ID</th>
+            <th class="text-center" scope="col">Nombre</th>
+            <th class="text-center" scope="col">Precio</th>
+            <th class="text-center" scope="col">Proveedor</th>
+            <th class="text-center" scope="col">Inventario</th>
+            <th class="text-center" scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let v of listVideojuegos">
+            <th class="text-center">{{v.cve_vid}}</th>
+            <td class="text-center">{{v.tit_vid}}</td>
+            <td class="text-center">{{v.pre_vid}}</td>
+            <td class="text-center">{{v.cveprov_vid}}</td>
+            <td class="text-center">{{v.inv_vid}}</td>
+            <td class="text-center">
+                <button class="btn btn-primary mx-1">Editar</button>
+                <button class="btn btn-danger mx-1">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+    </table>
+</div>

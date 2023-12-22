@@ -7,7 +7,7 @@ import { VideojuegosService } from 'src/app/services/videojuegos.service';
   styleUrls: ['./videojuegos.component.css']
 })
 export class VideojuegosComponent implements OnInit {
-
+  listVideojuegos: any = []
   constructor(private _videojuegosService: VideojuegosService) { }
 
   ngOnInit(): void {
@@ -17,7 +17,8 @@ export class VideojuegosComponent implements OnInit {
   getVideojuegos()
   {
     this._videojuegosService.getVideojuegos().subscribe(res => {
-      console.log(res)
+      this.listVideojuegos = res;
+      console.log(this.listVideojuegos)
     }, err => {
       console.log(err)
     })
